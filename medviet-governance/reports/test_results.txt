@@ -1,0 +1,35 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.1.1, pluggy-1.6.0 -- /home/asiat/Day24-Track02-2A202600682-Nguyen-Tai-Khoa/medviet-governance/.venv/bin/python
+rootdir: /home/asiat/Day24-Track02-2A202600682-Nguyen-Tai-Khoa/medviet-governance
+plugins: anyio-4.14.1, Faker-40.23.0
+collecting ... collected 27 items
+
+tests/test_pii.py::TestPIIDetection::test_cccd_detected PASSED           [  3%]
+tests/test_pii.py::TestPIIDetection::test_phone_detected PASSED          [  7%]
+tests/test_pii.py::TestPIIDetection::test_email_detected PASSED          [ 11%]
+tests/test_pii.py::TestPIIDetection::test_detection_rate_above_95_percent PASSED [ 14%]
+tests/test_pii.py::TestAnonymization::test_pii_not_in_output PASSED      [ 18%]
+tests/test_pii.py::TestAnonymization::test_non_pii_columns_unchanged PASSED [ 22%]
+tests/test_pii.py::TestAnonymization::test_anonymize_text_replace_removes_cccd PASSED [ 25%]
+tests/test_quality.py::test_anonymized_data_passes PASSED                [ 29%]
+tests/test_quality.py::test_validator_flags_leaked_cccd PASSED           [ 33%]
+tests/test_rbac.py::test_missing_token_401 PASSED                        [ 37%]
+tests/test_rbac.py::test_invalid_token_401 PASSED                        [ 40%]
+tests/test_rbac.py::test_admin_reads_raw PASSED                          [ 44%]
+tests/test_rbac.py::test_ml_engineer_denied_raw PASSED                   [ 48%]
+tests/test_rbac.py::test_analyst_denied_raw PASSED                       [ 51%]
+tests/test_rbac.py::test_intern_denied_raw PASSED                        [ 55%]
+tests/test_rbac.py::test_ml_engineer_reads_anonymized PASSED             [ 59%]
+tests/test_rbac.py::test_analyst_denied_anonymized PASSED                [ 62%]
+tests/test_rbac.py::test_analyst_reads_metrics PASSED                    [ 66%]
+tests/test_rbac.py::test_ml_engineer_reads_metrics PASSED                [ 70%]
+tests/test_rbac.py::test_ml_engineer_denied_delete PASSED                [ 74%]
+tests/test_rbac.py::test_admin_deletes PASSED                            [ 77%]
+tests/test_rbac.py::test_health_ok PASSED                                [ 81%]
+tests/test_vault.py::test_round_trip PASSED                              [ 85%]
+tests/test_vault.py::test_kek_persisted_as_32_bytes PASSED               [ 88%]
+tests/test_vault.py::test_kek_reused_across_instances PASSED             [ 92%]
+tests/test_vault.py::test_ciphertext_nondeterministic PASSED             [ 96%]
+tests/test_vault.py::test_encrypt_column PASSED                          [100%]
+
+============================== 27 passed in 9.86s ==============================

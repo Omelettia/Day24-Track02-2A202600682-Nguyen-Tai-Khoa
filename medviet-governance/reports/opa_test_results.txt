@@ -1,0 +1,12 @@
+OPA policy test results (Version: 1.18.1)
+------------------------------------------------------------
+allow: ml_engineer delete production_data  [exp False] => False
+allow: ml_engineer read training_data      [exp True ] => True
+allow: data_analyst read aggregated_metrics[exp True ] => True
+allow: data_analyst write reports          [exp True ] => True
+allow: data_analyst read patient_data      [exp False] => False
+allow: intern read sandbox_data            [exp True ] => True
+allow: intern read patient_data            [exp False] => False
+allow: admin delete patient_data           [exp True ] => True
+decision: restricted export to US          [exp False] => False
+decision: restricted export to VN          [exp True ] => True

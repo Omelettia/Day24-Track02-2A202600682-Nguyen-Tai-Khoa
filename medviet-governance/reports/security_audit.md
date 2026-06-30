@@ -17,12 +17,15 @@ The hook (`.github/hooks/pre-commit`, copied to `.git/hooks/pre-commit`) runs
 
 ```
 🔍 Running security checks...
-medviet-governance/leak_test.py:2:aws_access_key_id = "AKIAQYLPMN5HZ7Q9R2T4"
-medviet-governance/leak_test.py:3:aws_secret_access_key = "0123456789abcdefABCDEFghij0123456789abcd"
+medviet-governance/leak_test.py:2:aws_access_key_id = "AKIA****REDACTED-FAKE****"
+medviet-governance/leak_test.py:3:aws_secret_access_key = "0123456789****REDACTED-FAKE-40CHAR****"
 medviet-governance/leak_test.py:4:cccd_record = "CCCD: 012345678901"
 
 [ERROR] Matched one or more prohibited patterns
 ❌ git-secrets found potential secrets! Commit blocked.
+
+(Keys masked above for repo hygiene — the live scan caught a full AWS access-key id,
+a 40-char AWS secret-access-key, and a Vietnamese CCCD: three pattern types.)
 ```
 
 Three pattern types caught: AWS access-key id, AWS secret-access-key, and a

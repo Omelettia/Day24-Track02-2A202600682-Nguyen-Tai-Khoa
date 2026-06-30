@@ -4,8 +4,6 @@ data/raw/
 __pycache__/
 *.pyc
 *.pyo
-reports/*.json
-reports/*.txt
 .great_expectations/
 gx/
 .pytest_cache/
