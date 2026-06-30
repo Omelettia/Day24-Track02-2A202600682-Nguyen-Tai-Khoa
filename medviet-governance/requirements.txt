@@ -12,3 +12,7 @@ pytest>=7.0.0
 bandit>=1.7.0
 pip-audit>=2.5.0
 python-multipart>=0.0.6
+httpx>=0.27.0          # required by fastapi TestClient
+
+# NLP model (install separately, vi_core_news_lg is NOT a real spaCy model):
+#   python -m spacy download xx_ent_wiki_sm

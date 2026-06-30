@@ -10,3 +10,7 @@ reports/*.txt
 gx/
 .pytest_cache/
 mlflow.db
+
+# submission artifact
+*.zip
+leak_test.py
