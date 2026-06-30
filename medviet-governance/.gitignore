@@ -1,0 +1,12 @@
+.venv/
+data/raw/
+.vault_key
+__pycache__/
+*.pyc
+*.pyo
+reports/*.json
+reports/*.txt
+.great_expectations/
+gx/
+.pytest_cache/
+mlflow.db
